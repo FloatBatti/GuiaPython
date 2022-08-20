@@ -1,0 +1,75 @@
+# Las funciones de definen de la siguiente manera ---> def <nombre funcion> (<parametros>):
+# No se pueden pasar valores por referencia, solo las listas
+    
+from math import factorial
+from unittest import result
+
+
+def sumarNumeros(x, y):
+    
+    numero = x + y
+    
+    return numero
+    
+ 
+def sumarDefault(x = 5, y = 7):  # Se pueden poner valores por default para optar no poner argumentos
+    
+    numero = x+y
+    
+    return numero
+    
+def devuelveStr (palabra) -> str:  # Agrega una pista del tipo de valor que devuelve. No es obligatorio
+    
+    return palabra + " Mundo"
+
+
+num = sumarNumeros(5, 7)
+
+num2 = sumarDefault(x=7)  # Puedo cambiar el valor de la variable por default
+
+palabra = devuelveStr("Hola")
+
+print(num)
+print(num2)
+print(palabra)
+
+
+""" Argumentos Variables """  # Se desconoce la cantidad de argumentos que pueden ingresarse
+
+    
+def multiplicarNumeros (*numeros):  # El argumento se itera como si fuera una Tupla 
+    
+    result = 1
+    
+    for num in numeros:
+        
+        result *= num
+    
+    return result
+
+print(multiplicarNumeros(1,2,3,4,5,6,7,8,9,10))
+
+
+""" Argumentos Variables Key-Value """
+
+def listarTerminos (**terminos):
+    
+    for llave, valor in terminos.items():
+        print(f"{llave}: {valor}")
+        
+
+listarTerminos(Edad= 24, Altura= 1.70 , Peso= 60)  # La Key no lleva comillas y puede ser cualquier tipo de datos
+
+
+""" Funciones recursivas """
+
+def calcularFactorial(numero):
+    
+    if (numero == 1):
+        return numero
+    else:
+        return numero * calcularFactorial(numero-1)
+    
+    
+    
+print(calcularFactorial(5))
