@@ -67,6 +67,8 @@ empleado1 = Empleado("Agustin", 24, 20000)
 
 print(empleado1)
 
+print("Es de la clase Empleado" if isinstance(empleado1, Empleado) else "No es de la clase empleado")  #Evalua si el primer argumento es de la clase que se ubica en el segundo argumento
+
 
 """ Ejemplo Cuadrado """
 
