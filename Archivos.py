@@ -5,16 +5,32 @@
 arreglo = [1, 2, 3, 4]
 nombre = "Agus"
 
-archi = open("Arreglos.bin", "w")
+try:
+    
+    archivo = open("Archivo.txt", "w", encoding="utf8")  # El ultimo parametro hace que se acepten acentos
+    archivo.write("Hola, soy un archivo")
 
-archi.write(arreglo[0])
+except Exception as e:
+    
+    print(e)
+    
+finally:
+    
+    archivo.close()
 
-archi.close()
 
-archi = open("Arreglos.bin", "r")
+try:
+    
+    archivo = open("Archivo.txt", "r")
 
-print(archi.read())
+    print(archivo.read())
 
-archi.close()
+except Exception as e:
+    
+    print(e)
+    
+finally:
+    
+    archivo.close()
 
 print("------ \n")

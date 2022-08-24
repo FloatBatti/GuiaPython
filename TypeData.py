@@ -4,6 +4,8 @@ PI_CONS = math.pi  # En python no existen las constantes. Por convencion se pone
 pi = round(PI_CONS, 4)  # Lo redondeo a 4 decimales
 print(pi)
 
+vacio = None # Indica que la variable no guarda ningun valor
+
 # La funcion input siempre devuelve una cadena de caracteres, por eso se castea
 
 name = input("Ingrese nombre: ")  # Se pide ingresar un nombre

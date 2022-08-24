@@ -1,9 +1,5 @@
 # Las funciones de definen de la siguiente manera ---> def <nombre funcion> (<parametros>):
-# No se pueden pasar valores por referencia, solo las listas
-    
-from math import factorial
-from unittest import result
-
+# No se pueden pasar valores por referencia, solo las colecciones
 
 def sumarNumeros(x, y):
     
@@ -22,6 +18,13 @@ def devuelveStr (palabra) -> str:  # Agrega una pista del tipo de valor que devu
     
     return palabra + " Mundo"
 
+def arregloCambiado(array):  # Las colecciones siempre se pasan por referencia
+    array *= 3 
+    
+
+arreglo = [1,2,3,4]
+
+arregloCambiado(arreglo)
 
 num = sumarNumeros(5, 7)
 
@@ -32,6 +35,8 @@ palabra = devuelveStr("Hola")
 print(num)
 print(num2)
 print(palabra)
+print(f"Arreglo cambiado: {arreglo}") 
+
 
 
 """ Argumentos Variables """  # Se desconoce la cantidad de argumentos que pueden ingresarse
