@@ -1,50 +1,6 @@
 from copy import deepcopy
 
-"""" --- EJEMPLOS DE STRINGS --- """
 
-nombre = "Agustin"
-myStr = "hOlA mI nOmBre Es aGus"
-
-print(" Colecciones en Python ".center(50,'-'))  # Ubica el String en el centro, y a sus lados los 50 caracteres del tipo que indicamos, es decir 25 '-' de cada lado
-
-print(f"Cantidad de caracteres de 'Agustin': {len(nombre)}")  # Cantidad de caracteres del string
-
-print(f"Tercera letra de 'Agustin': {nombre[2]}")  # Indexación
-
-print(f"Letras del medio de 'Agustin': {nombre[1:6]}")  # Se selecciona una parte del string [inicio:fin]. El fin no se incluye
-
-print(f"String 'Agustin' saltando de a 2 caracteres: {nombre[1:6:2]}")  # Se le agrega otro parametro que indica el paso
-# Si usamos una posición que no existe en el 'final' no pasa nada
-# Si queremos solo poner un tope final ---> [:final]
-# Si queremos solo poner un inicio --->[inicio:]
-# Si queremos que se tome el string completo ---> [:]
-
-# Lo que va luego de 'variable.' se llama metodo ----> <cadena>.<metodo>(<valores>)
-
-print(myStr.upper())  # Todo en mayuscula
-print(myStr.lower())  # Todo en minuscula
-print(myStr.capitalize())  # La primer letra en mayuscula
-print(myStr.replace("hOlA", "bye"))  # Reemplaza el primero por el segundo
-print(nombre.center(30))  # Devuelve una cadena centrada en un campo de tamaño
-print(myStr.split())  # Crea una lista cuyos elementos son las palabras que conformaban una oración
-
-# Busca y devuelve la posicion de inicio del elemento buscado. Si no la encuentra devuelve -1
-# Se indica ("<parte buscada>, inicio, fin)-. Si no se aclara el inicio o fin se toma el default
-print(myStr.find("Es"))
-
-print(myStr.find("Es", 0, 10))  # Aqui no encuentra y devuelve -1
-
-print(myStr.index("mI"))  # Igual que el .find pero no devuleve -1, da error si no lo encuentra
-
-"""Otros Metodos importantes para strings:
-
-isalnum: Devuelve True o False si es una cadena alfanumerica (letras y numeros)
-isalpha: Devuelve True o False si es una cadena alfabetica (solo letras)
-isdigit: Devuelve True o False si es una cadena numerica (solo numeros)
-islower: Devuelve True o False si es una cadena contiene solo minusculas
-isupper: Devuelve True o False si es una cadena contiene solo mayusculas
-
-"""
 
 """ --- EJEMPLOS DE LISTAS --- """
 
