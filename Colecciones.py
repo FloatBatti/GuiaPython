@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 """" --- EJEMPLOS DE STRINGS --- """
 
 nombre = "Agustin"
@@ -126,3 +128,29 @@ planetas.add('Tierra')  # Agrega un elemento al final del Set
 planetas.add('Tierra')  # Aunque agreguemos nuevamente el dato no se va a agregar al Set
 
 print(f"Se agrega Tierra: {planetas}") 
+
+
+""" Metodo Zip """  # Une dos colecciones que tengan el mismo largo. Devuelve el tipo de coleccion que le indiquemos casteandolo. Cada elemento de la coleccion van a ser el par de elementos de las otras listas en el orden de sus indices
+
+zip1= [1,2,3]
+zip2= [4,5,6]
+
+zip3 = list(zip(zip1,zip2))
+
+print(zip3)
+
+nombres = ["Agustin", "Juan", "Pablo"]
+edades = [24, 40, 15]
+
+dicZip = dict(zip(nombres, edades))  # Devuelve un diccionario con su clave valor
+
+print(dicZip)
+
+
+""" Metodo Deepcopy"""  # A diferencia de Copy hace un copiado mas profundo. Se utiliza para copiar variables que almacenen estructuras complejas
+
+listaCompuesta = [1,2,3, ["Gato", "Perro"]]
+
+listaCopiada = deepcopy(listaCompuesta)
+
+print(listaCopiada)

@@ -1,4 +1,5 @@
 import math
+from copy import copy
 
 PI_CONS = math.pi  # En python no existen las constantes. Por convencion se pone la variable en mayuscula y las palabras divididas por un '_'. Las constantes se declaran en un modulo distinto
 pi = round(PI_CONS, 4)  # Lo redondeo a 4 decimales
@@ -30,7 +31,10 @@ print(20.5 / 3.2)
 print(20.5 // 3.2)
 print(5 ** 3)  # significa potencia, sería 5 al cubo
 
-# El if se declara de la siguiente manera. Se puede no usar {}, por ejemplo en el else
+
+nombre2 = copy(nombre)  # Devuelve una copia superficial. Hace que la variable haga referencia a los datos y no a la memoria
+
+print(nombre2)
 
 if temp < 25:
     print("Hace frio")
