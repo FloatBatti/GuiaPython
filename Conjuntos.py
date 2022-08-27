@@ -1,7 +1,4 @@
-# Un conjunto es una colección no ordenada de cero o más objetos de datos de Python inmutables. Los conjuntos no
-# permiten duplicaciones y se escriben como valores delimitados por comas encerrados entre llaves.
-# Los conjuntos nos son secuenciales
-# Un conjunto vacio (sin elementos) se expresa como "set()"
+# Un conjunto es una colección no ordenada de cero o más objetos de datos de Python inmutables. Los conjuntos no permiten duplicaciones y se escriben como valores delimitados por comas encerrados entre llaves. Los conjuntos nos son secuenciales. Un conjunto vacio (sin elementos) se expresa como "set()"
 
 conjunto = {3, 6, 5, "gato", "python", 4.5, False}  # Puede ser heterogeneo
 
@@ -19,7 +16,7 @@ print(conjunto - otroConjunto)  # Devuelve un nuevo conjunto con todos los ítem
 
 print(conjunto <= otroConjunto)  # Evalua si todos los elementos del primer conjunto están en el segundo
 
-print("---------------------------------------------------")
+print("Operaciones con Conjuntos".center(70, "-"))
 
 """ Se puden realizar operaciones de conjuntos con metodos realacionados a las matematicas """
 

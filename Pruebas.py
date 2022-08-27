@@ -1,9 +1,8 @@
-num = 5
+from copy import*
 
 
-def sumar(num):
-    num = 6
- 
-sumar(num)
-    
-print(num)
+a = [5,4,[1,2]]
+b = deepcopy(a)
+b[2][0] = 3
+
+print(a)

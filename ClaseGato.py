@@ -48,13 +48,24 @@ class Gato:
         else:
             print(f"{self.__nombre} es cachorro")
 
-    def esAlimentoFavorito(self, alimento):
+    def esAlimentoFavorito(self, alimento):  #  Ejemplo de documentar una función
+        
+        """
+        La fucion evalua si el alimento recibido como parametro está en la lista del objeto
+        
+            Parameter:
+                        alimento (str) : Alimento a evaluar
+                    
+            Return:
+                        (boolean) : Retorna True si esta o False de lo contrario
+                    
+        """
         return alimento in self.alimentos
 
 
-    @staticmethod  # Metodo estatico. Hace que la funcion se relacione con la clase y no con los objetos. No puede acceder a variables de instancia y tampoco tiene relacion con los datos de la clase. Sirve si queremos tener un metodo de clase que no tenga nada que ver con los atributos ( de la clase o su instancia)
+    @staticmethod  # Metodo estatico. Hace que la funcion se relacione con la clase y no con los objetos. No puede acceder a variables de instancia y tampoco tiene relacion con los datos de la clase. Sirve si queremos tener un metodo de clase que no tenga nada que ver con los atributos (de la clase o su instancia)
     def maullar():
-        print("Miaw")
+        print(f"Este {Gato.especie} hace Miaw")
         
     @classmethod  # Metodo de clase. Puede acceder a metodos o variables de la clase
     def edadCritica(cls, edad):  # En vez de self lleva un argumento que hace referencia a la propia clase, no a la instancia. Se puede acceder a las variables de clase sin tener que utilizar el nombre de la clase

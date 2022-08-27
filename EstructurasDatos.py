@@ -2,18 +2,22 @@ from copy import deepcopy
 
 
 
-""" --- EJEMPLOS DE LISTAS --- """
+""" --- EJEMPLOS DE LISTAS / ARREGLOS --- """
+
+print(" Ejemplo de Listas/Arreglos ".center(50, "-"))
 
 lista = [1, 2, 3, "agus", True, "quiero dormir"]  # la lista puede ser mixta
 
 listaNum: list[int] = [1, 2, 3, 4, 5, 7]  # Lo casteo a entero
 
-print(f"Lista concatenada: {lista + listaNum} ")  # El + concatena las litas
-
-print(f"Lista repetida {listaNum * 3}")  # El * hace que la lista se repita una cantidad determinada de veces
-print(f"Lista repetida {[listaNum] * 3}")  # Se crea un arreglo de arreglos
+print(f"Lista concatenada: {lista + listaNum} ")  # El + concatena (une) las listas en una sola
 
 print(f"Lista original: {listaNum}")
+
+print(f"Lista repetida {listaNum * 3}")  # El * hace que la lista se repita una cantidad determinada de veces
+print(f"Lista con elementos complejos repetidos {[listaNum] * 3}")  # Se crea un arreglo que contiene 3 arreglos como elementos
+
+print("Lista incializada de 10 elementos: ", 10*[0])  # Crea una lista de n cantidad de elementos cuyos valores son los que se indican entre corchetes 
 
 print(f"Primeros dos numeros: {listaNum[0:2]}")  # Toma los valores del indice 0 al 2
 
@@ -26,7 +30,7 @@ listaNum.insert(5, 6)  # El elemento que estaba en esa posicion se corre un luga
 
 print(f"Lista Modificada: {listaNum}")
 
-listaNum.remove(5)  # Remueve el elemento elegido (la primera aparición). Si no está en la lista se genera un error
+listaNum.remove(5)  # Remueve el elemento ingresado como parametro (la primera aparición). Si no está en la lista se genera un error
 listaNum.pop()  # Remueve el ultimo elemento de la lista
 del listaNum[0]  # Se elimina un elemento especificando un indice
 
@@ -63,9 +67,12 @@ listaNum.clear()  # Borra todos los elementos de la lista
 
 del listaNum  # Borra la lista de la memoria
 
-""" --- EJEMPLO DE TUPLAS --- """  # La forma de buscar elementos o metodos, como saber el tamaño, es igual que con listas
 
-listaInmutable = (10, 20, 30, 40)  # Se le llama TUPLA y es una lista inmutable, no se puede modificar
+""" --- EJEMPLO DE TUPLAS --- """  # Es una lista inmutable, no se puede modificar. La forma de buscar elementos o metodos, como saber el tamaño, es igual que con listas
+
+print(" Ejemplo de Tuplas ".center(50, "-"))
+
+listaInmutable = (10, 20, 30, 40)  
 
 print(f"Largo de una tupla: {len(listaInmutable)}")
 
@@ -75,6 +82,8 @@ listaInmutable = tuple(listaMutable)  # Convierto la Lista en una Tupla
 
 
 """ --- EJEMPLO DE SET --- """  # No mantiene un orden, no tiene indices y no permite elementos duplicados. Muchos metodos son iguales a las Tuplas y Listas
+
+print(" Ejemplo de Set ".center(50, "-"))
 
 planetas = {'Marte', 'Jupiter', 'Venus'}
 
@@ -86,7 +95,9 @@ planetas.add('Tierra')  # Aunque agreguemos nuevamente el dato no se va a agrega
 print(f"Se agrega Tierra: {planetas}") 
 
 
-""" Metodo Zip """  # Une dos colecciones que tengan el mismo largo. Devuelve el tipo de coleccion que le indiquemos casteandolo. Cada elemento de la coleccion van a ser el par de elementos de las otras listas en el orden de sus indices
+""" Metodo Zip """  # Une dos colecciones que tengan el mismo largo. Devuelve el tipo de estructura que le indiquemos casteandolo. Cada elemento de la estructura van a ser el par de elementos de las otras listas en el orden de sus indices
+
+print(" Ejemplo del metodo Zip ".center(50, "-"))
 
 zip1= [1,2,3]
 zip2= [4,5,6]
@@ -103,10 +114,3 @@ dicZip = dict(zip(nombres, edades))  # Devuelve un diccionario con su clave valo
 print(dicZip)
 
 
-""" Metodo Deepcopy"""  # A diferencia de Copy hace un copiado mas profundo. Se utiliza para copiar variables que almacenen estructuras complejas
-
-listaCompuesta = [1,2,3, ["Gato", "Perro"]]
-
-listaCopiada = deepcopy(listaCompuesta)
-
-print(listaCopiada)

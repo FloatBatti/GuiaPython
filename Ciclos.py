@@ -76,7 +76,7 @@ while x < 35:
     print(x)
     x += 2
     
-frase = "Quiero estar en paz"
+frase = "Quiero dormir"
 letra = iter(frase)  # Crea un iterador de el string indicado
 
 

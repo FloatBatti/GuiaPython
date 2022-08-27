@@ -5,6 +5,8 @@ from ClasePersona import*
 
 """ Ejemplo Gato """
 
+print(" Demostración del objeto Gato ".center(50, "-"))
+
 gato1 = Gato("Pelusa", 1)
 
 gato1.raza = "Siames"  # Cree un nuevo atributo SOLO para este objeto
@@ -19,6 +21,8 @@ gato1.alimentos = ["croquetas", "pescado"]  # Reemplaza la lista anterior
 gato1.esAlimentoFavorito("pescado")  # Devuelve True
 
 Gato.verEtapaDeVida(gato1)  # Si utilizo un metodo llamandolo a travez de la clase me pide un objeto como parametro self
+
+Gato.maullar()  # Uso del metodo estatico
 
 print(gato1)
 
@@ -43,6 +47,8 @@ del gato2  # Se llama al metodo '__del__'
 
 """ Ejemplo Fraccion """
 
+print(" Demostración del objeto Fracción ".center(50, "-"))
+
 miFraccion = Fraccion(3, 5)
 f1 = Fraccion(1, 2)
 f2 = Fraccion(1, 2)
@@ -56,12 +62,16 @@ print(f1 == f3)
 
 """ Ejemplo Herencia """
 
+print(" Ejemplo de Herencia ".center(50, "-"))
+
 numero = Decimal(1, 4)
 
 print(numero.decimal())
 
 
-""" Ejemplo Pérsona """
+""" Ejemplo Persona """
+
+print(" Demostración del objeto Persona ".center(50, "-"))
 
 empleado1 = Empleado("Agustin", 24, 20000)
 
@@ -72,8 +82,14 @@ print("Es de la clase Empleado" if isinstance(empleado1, Empleado) else "No es d
 
 """ Ejemplo Cuadrado """
 
-cuad = Cuadrado(10, 10, "Rojo")
+print(" Demostración del objeto Cuadrado ".center(50, "-"))
 
+cuad = Cuadrado(10, 10, "Rojo")
 
 print(cuad)
 print(f"Area del cuadrado: {cuad.calcularArea()}")
+
+op = input("Si desea leer los documentos de la clase Gato presion 's': ")
+
+if (op == "s"):  
+    help(Gato)

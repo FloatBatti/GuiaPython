@@ -41,6 +41,7 @@ print(f"Arreglo cambiado: {arreglo}")
 
 """ Argumentos Variables """  # Se desconoce la cantidad de argumentos que pueden ingresarse
 
+print(" Argumentos Variables ".center(50, "-"))
     
 def multiplicarNumeros (*numeros):  # El argumento se itera como si fuera una Tupla 
     
@@ -57,6 +58,8 @@ print(multiplicarNumeros(1,2,3,4,5,6,7,8,9,10))
 
 """ Argumentos Variables Key-Value """
 
+print(" Argumentos Variables Key-Value ".center(50, "-"))
+
 def listarTerminos (**terminos):
     
     for llave, valor in terminos.items():
@@ -67,6 +70,8 @@ listarTerminos(Edad= 24, Altura= 1.70 , Peso= 60)  # La Key no lleva comillas y 
 
 
 """ Funciones recursivas """
+
+print(" Funciones recursivas ".center(50, "-"))
 
 def calcularFactorial(numero):
     

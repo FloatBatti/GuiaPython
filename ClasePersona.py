@@ -23,6 +23,9 @@ class Empleado(Persona):
     
     def trabajar():
         print("Estoy trabajando")
+        
+        
+        return f"Su sueldo a cambiado al valor de {self.sueldo}"
     
     def __str__(self):  # Sobreescribe la funcion __str__ del padre
         
