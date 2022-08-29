@@ -84,7 +84,7 @@ try:
     
     archivo = open("Archivo.txt", "r", encoding="utf8")
 
-    list2 = archivo.readlines()[1]  # Lee la linea en la posicion que le indicamos. Tambien lo devulve como lista
+    list2 = archivo.readlines()[1]  # Lee la linea en la posicion que le indicamos (arriba del todo es el indice 0). Tambien lo devulve como lista
     
     print(list2)
     print(type(list))

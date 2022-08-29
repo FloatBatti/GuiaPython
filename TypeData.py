@@ -24,7 +24,6 @@ print(5 ** 3)  # significa potencia, sería 5 al cubo
 
 
 
-
 """" --- STRINGS --- """
 
 # Los Strings son Inmutables, es decir, cuando devolvemos un String formateado por un método, la variable que lo almacena, apunta a otra direccion de memoria. No se cambia el String original, sino que se crea uno nuevo
@@ -90,6 +89,8 @@ if temp < 25:
     print("Hace frio")
 else:
     print("Hace calor")
+
+
     
 """ AYUDA EN PYHTON """
 

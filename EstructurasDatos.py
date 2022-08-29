@@ -6,7 +6,7 @@ from copy import deepcopy
 
 print(" Ejemplo de Listas/Arreglos ".center(50, "-"))
 
-lista = [1, 2, 3, "agus", True, "quiero dormir"]  # la lista puede ser mixta
+lista = [1, 2, 3, "agus", True, "curso python"]  # la lista puede ser mixta
 
 listaNum: list[int] = [1, 2, 3, 4, 5, 7]  # Lo casteo a entero
 
@@ -15,6 +15,7 @@ print(f"Lista concatenada: {lista + listaNum} ")  # El + concatena (une) las lis
 print(f"Lista original: {listaNum}")
 
 print(f"Lista repetida {listaNum * 3}")  # El * hace que la lista se repita una cantidad determinada de veces
+
 print(f"Lista con elementos complejos repetidos {[listaNum] * 3}")  # Se crea un arreglo que contiene 3 arreglos como elementos
 
 print("Lista incializada de 10 elementos: ", 10*[0])  # Crea una lista de n cantidad de elementos cuyos valores son los que se indican entre corchetes 
@@ -31,7 +32,9 @@ listaNum.insert(5, 6)  # El elemento que estaba en esa posicion se corre un luga
 print(f"Lista Modificada: {listaNum}")
 
 listaNum.remove(5)  # Remueve el elemento ingresado como parametro (la primera aparición). Si no está en la lista se genera un error
+
 listaNum.pop()  # Remueve el ultimo elemento de la lista
+
 del listaNum[0]  # Se elimina un elemento especificando un indice
 
 print(f"Remuevo el 5: {listaNum}")
@@ -40,16 +43,13 @@ print(f"Posición del numero 4: [{listaNum.index(4)}]")  # Busca cual es la posi
 
 print(3 in listaNum)  # Devuelve True si el elemento esta en la lista, de lo contrario False
 
-lista.extend(listaNum)  # Agrega al final de la lista mas de un elemento, en este caso una lista, pero puede ser un
-# arreglo
+lista.extend(listaNum)  # Agrega al final de la lista mas de un elemento, en este caso una lista
 
 print(f"Lista extendida: {lista}")
 
-print(f"Veces que se repite el 2: {lista.count(2)}")  # Cuenta la cantidad de veces que un elemento se encuentra en
-# una lista
+print(f"Veces que se repite el 2: {lista.count(2)}")  # Cuenta la cantidad de veces que un elemento se encuentra en una lista
 
-print(f"El ultimo elemento de listaNum: {listaNum.pop(), listaNum}")  # Elimina y devuelve el ultimo elemento de la
-# lista
+print(f"El ultimo elemento de listaNum: {listaNum.pop(), listaNum}")  # Elimina y devuelve el ultimo elemento de la lista
 
 del listaNum[1]  # Borra el item de la posición indicada
 
@@ -95,7 +95,7 @@ planetas.add('Tierra')  # Aunque agreguemos nuevamente el dato no se va a agrega
 print(f"Se agrega Tierra: {planetas}") 
 
 
-""" Metodo Zip """  # Une dos colecciones que tengan el mismo largo. Devuelve el tipo de estructura que le indiquemos casteandolo. Cada elemento de la estructura van a ser el par de elementos de las otras listas en el orden de sus indices
+""" Metodo Zip """  # Une dos estructuras que tengan el mismo largo. Devuelve el tipo de estructura que le indiquemos casteandolo. Cada elemento de la estructura van a ser el par de elementos de las otras listas en el orden de sus indices
 
 print(" Ejemplo del metodo Zip ".center(50, "-"))
 
