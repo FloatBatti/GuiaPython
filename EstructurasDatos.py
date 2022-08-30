@@ -14,13 +14,13 @@ print(f"Lista concatenada: {lista + listaNum} ")  # El + concatena (une) las lis
 
 print(f"Lista original: {listaNum}")
 
-print(f"Lista repetida {listaNum * 3}")  # El * hace que la lista se repita una cantidad determinada de veces
+print(f"Lista repetida {listaNum * 3}")  # El * hace que la lista se repita una cantidad determinada de veces. Obtengo una lista de elementos simples
 
-print(f"Lista con elementos complejos repetidos {[listaNum] * 3}")  # Se crea un arreglo que contiene 3 arreglos como elementos
+print(f"Lista con elementos complejos repetidos {[listaNum] * 3}")  # Se crea una lista que contiene 3 listas como elementos
 
 print("Lista incializada de 10 elementos: ", 10*[0])  # Crea una lista de n cantidad de elementos cuyos valores son los que se indican entre corchetes 
 
-print(f"Primeros dos numeros: {listaNum[0:2]}")  # Toma los valores del indice 0 al 2
+print(f"Primeros dos numeros: {listaNum[0:2]}")  # Toma los valores del indice 0 al 2. El elemento del ultimo indice no se toma, es decir, el elemento de la posicion 2 no va a ser devuelto
 
 print(f"Ultimo indice de la lista : {listaNum[-1]}")  # Con numeros negativos puedo navegar de forma inversa
 
@@ -33,7 +33,7 @@ print(f"Lista Modificada: {listaNum}")
 
 listaNum.remove(5)  # Remueve el elemento ingresado como parametro (la primera aparición). Si no está en la lista se genera un error
 
-listaNum.pop()  # Remueve el ultimo elemento de la lista
+listaNum.pop()  # Remueve el ultimo elemento de la lista. Si se indica el indice por parametro se borra el elemento en dicho indice
 
 del listaNum[0]  # Se elimina un elemento especificando un indice
 
@@ -43,7 +43,7 @@ print(f"Posición del numero 4: [{listaNum.index(4)}]")  # Busca cual es la posi
 
 print(3 in listaNum)  # Devuelve True si el elemento esta en la lista, de lo contrario False
 
-lista.extend(listaNum)  # Agrega al final de la lista mas de un elemento, en este caso una lista
+lista.extend(listaNum)  # Agrega al final de la lista mas de un elemento. El argumento tiene que ser si o si una estructura del mismo tipo
 
 print(f"Lista extendida: {lista}")
 
@@ -59,11 +59,11 @@ listaNum.reverse()  # Reversa el orden actual de la lista
 
 print(f"La lista al revez quedaria: {listaNum}")
 
-listaNum.sort(reverse=True)  # Ordena la lista de forma descendente
-
 listaNum.sort()  # Ordena la lista de forma ascendente
 
-listaNum.clear()  # Borra todos los elementos de la lista
+listaNum.sort(reverse=True)  # Ordena la lista de forma descendente
+
+listaNum.clear()  # Borra todos los elementos de la lista, pero esta sigue en la memoria
 
 del listaNum  # Borra la lista de la memoria
 
