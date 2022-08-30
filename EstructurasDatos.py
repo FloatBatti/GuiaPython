@@ -1,7 +1,6 @@
 from copy import deepcopy
 
 
-
 """ --- EJEMPLOS DE LISTAS / ARREGLOS --- """
 
 print(" Ejemplo de Listas/Arreglos ".center(50, "-"))
@@ -20,7 +19,7 @@ print(f"Lista con elementos complejos repetidos {[listaNum] * 3}")  # Se crea un
 
 print("Lista incializada de 10 elementos: ", 10*[0])  # Crea una lista de n cantidad de elementos cuyos valores son los que se indican entre corchetes 
 
-print(f"Primeros dos numeros: {listaNum[0:2]}")  # Toma los valores del indice 0 al 2. El elemento del ultimo indice no se toma, es decir, el elemento de la posicion 2 no va a ser devuelto
+print(f"Primeros dos numeros: {listaNum[0:2]}")  # Toma los valores del indice 0 al 2. El elemento del ultimo indice no se toma, es decir, el elemento de la posicion 2 no va a ser devuelto. Si se le asigan valores, los va a ubicar en esa posicion
 
 print(f"Ultimo indice de la lista : {listaNum[-1]}")  # Con numeros negativos puedo navegar de forma inversa
 
@@ -39,7 +38,7 @@ del listaNum[0]  # Se elimina un elemento especificando un indice
 
 print(f"Remuevo el 5: {listaNum}")
 
-print(f"Posición del numero 4: [{listaNum.index(4)}]")  # Busca cual es la posicion del numero 4
+print(f"Posición del numero 4: [{listaNum.index(4)}]")  # devuelve la posicion del numero 4 en el arreglo
 
 print(3 in listaNum)  # Devuelve True si el elemento esta en la lista, de lo contrario False
 

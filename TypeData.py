@@ -49,8 +49,6 @@ print(f"Cantidad de caracteres de 'Agustin': {len(nombre)}")  # Cantidad de cara
 
 print(f"Tercera letra de 'Agustin': {nombre[2]}")  # Indexación
 
-
-
 print(f"Letras del medio de 'Agustin': {nombre[1:6]}")  # Se selecciona una parte del string [inicio:fin]. El fin no se incluye
 
 print(f"String 'Agustin' saltando de a 2 caracteres: {nombre[1:6:2]}")  # Se le agrega otro parametro que indica el paso
