@@ -9,6 +9,8 @@ lista = [1, 2, 3, "agus", True, "curso python"]  # la lista puede ser mixta
 
 listaNum: list[int] = [1, 2, 3, 4, 5, 7]  # Lo casteo a entero
 
+print("Elemento en el indice 4 de lista", lista[4])  # Se puede obtener un elemento poniendo un indice
+
 print(f"Lista concatenada: {lista + listaNum} ")  # El + concatena (une) las listas en una sola
 
 print(f"Lista original: {listaNum}")
@@ -71,7 +73,11 @@ del listaNum  # Borra la lista de la memoria
 
 print(" Ejemplo de Tuplas ".center(50, "-"))
 
-listaInmutable = (10, 20, 30, 40)  
+listaInmutable = (10, 20, 30, 40,10)  
+
+print(f"El 10 aparece {listaInmutable.count(10)} veces")  # Count al igual que con los arreglos me devuelve la cantidad de veces que se repite un elemento en la estructura
+
+print("Numero en el indice 2 de listaInmutable: ", lista[2])  # Al igual de con las listas, se puede obtener un elemento poniendo un indice
 
 print(f"Largo de una tupla: {len(listaInmutable)}")
 
@@ -92,6 +98,8 @@ planetas.add('Tierra')  # Agrega un elemento al final del Set
 planetas.add('Tierra')  # Aunque agreguemos nuevamente el dato no se va a agregar al Set
 
 print(f"Se agrega Tierra: {planetas}") 
+
+planetas.discard('Tierra')
 
 
 """ Metodo Zip """  # Une dos estructuras que tengan el mismo largo. Devuelve el tipo de estructura que le indiquemos casteandolo. Cada elemento de la estructura van a ser el par de elementos de las otras listas en el orden de sus indices

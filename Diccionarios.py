@@ -2,6 +2,8 @@
 
 dicc = {"age": 35, "name": "Juan"}  # Crea un diccionario. "clave (key)": valor (value)
 
+dicc = dict(age = 35, name="Juan")
+
 print(dicc)
 
 print(dicc["age"])  # Devuelve el valor de la clave elegida. <diccionario>[<clave>]
@@ -30,7 +32,7 @@ print(dicc.values())  # Devuelve los valores del diccionario
 
 print(dicc.items())  # Devuelve las parejas clave-valor del diccionario
 
-dicc.clear  # Vacia el diccionario
+dicc.clear()  # Vacia el diccionario
 
 del dicc  # Elimina la variable de la memoria
 

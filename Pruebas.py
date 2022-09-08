@@ -1,7 +1,12 @@
+from Funciones import*
 
-lista = [5,10,87,1,2,65]
+lista=[1,2,3,4]
 
-print("Lista normal: ", lista)
+def main():
+    
+    print(sumarDefault(10))
+    
+    
 
-print(lista.index(65))
-
+if __name__ == "__main__":
+    main()

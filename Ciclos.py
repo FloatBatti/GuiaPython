@@ -14,13 +14,7 @@ print("----------------------------")
 for i in range(0, 10, 2):  # Podemos agregar un tercer parametro que indica el paso. Por defecto es 1
     print(i)
 
-# Otro tipo de ciclo for ---> for <control var> in <itreable>. Los iterables son strings, listas, tuplas,
-# diccionarios, etc.
-
-print("----------------------------")
-
-for i in range(0, 10):
-    print(i)
+# Otro tipo de ciclo for ---> for <control var> in <itreable>. Los iterables son strings, listas, tuplas, diccionarios, etc.
 
 print("----------------------------")
 

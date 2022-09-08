@@ -22,27 +22,8 @@ def arregloCambiado(array):  # Las colecciones siempre se pasan por referencia
     array *= 3 
     
 
-arreglo = [1,2,3,4]
-
-arregloCambiado(arreglo)
-
-num = sumarNumeros(5, 7)
-
-num2 = sumarDefault(x=7)  # Puedo cambiar el valor de la variable por default
-
-palabra = devuelveStr("Hola")
-
-print(num)
-print(num2)
-print(palabra)
-print(f"Arreglo cambiado: {arreglo}") 
-
-
-
 """ Argumentos Variables """  # Se desconoce la cantidad de argumentos que pueden ingresarse
-
-print(" Argumentos Variables ".center(50, "-"))
-    
+   
 def multiplicarNumeros (*numeros):  # El argumento se itera como si fuera una Tupla 
     
     result = 1
@@ -53,12 +34,9 @@ def multiplicarNumeros (*numeros):  # El argumento se itera como si fuera una Tu
     
     return result
 
-print(multiplicarNumeros(1,2,3,4,5,6,7,8,9,10))
 
 
 """ Argumentos Variables Key-Value """
-
-print(" Argumentos Variables Key-Value ".center(50, "-"))
 
 def listarTerminos (**terminos):
     
@@ -66,12 +44,8 @@ def listarTerminos (**terminos):
         print(f"{llave}: {valor}")
         
 
-listarTerminos(Edad= 24, Altura= 1.70 , Peso= 60)  # La Key no lleva comillas y puede ser cualquier tipo de datos
-
-
 """ Funciones recursivas """
 
-print(" Funciones recursivas ".center(50, "-"))
 
 def calcularFactorial(numero):
     
@@ -82,4 +56,34 @@ def calcularFactorial(numero):
     
     
     
-print(calcularFactorial(5))
+def main():
+    
+    arreglo = [1,2,3,4]
+
+    arregloCambiado(arreglo)
+
+    num = sumarNumeros(5, 7)
+
+    num2 = sumarDefault(x=7)  # Puedo cambiar el valor de la variable por default
+
+    palabra = devuelveStr("Hola")
+
+    print(num)
+    print(num2)
+    print(palabra)
+    print(f"Arreglo cambiado: {arreglo}") 
+    
+    print(" Argumentos Variables ".center(50, "-"))
+    
+    print(multiplicarNumeros(1,2,3,4,5,6,7,8,9,10))
+    
+    print(" Argumentos Variables Key-Value ".center(50, "-"))
+
+    listarTerminos(Edad= 24, Altura= 1.70 , Peso= 60)  # La Key no lleva comillas y puede ser cualquier tipo de datos
+
+    print(" Funciones recursivas ".center(50, "-"))
+    
+    print(calcularFactorial(5))
+
+if __name__ == "__main__":
+    main()
