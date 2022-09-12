@@ -18,13 +18,13 @@ def devuelveStr (palabra) -> str:  # Agrega una pista del tipo de valor que devu
     
     return palabra + " Mundo"
 
-def arregloCambiado(array):  # Las colecciones siempre se pasan por referencia
+def arregloCambiado(array):  # Las estructuras de datos siempre se pasan por referencia
     array *= 3 
     
 
 """ Argumentos Variables """  # Se desconoce la cantidad de argumentos que pueden ingresarse
    
-def multiplicarNumeros (*numeros):  # El argumento se itera como si fuera una Tupla 
+def multiplicarNumeros (*numeros):  # El argumento se itera como si fuera una Tupla, ya que no se puede modificar, sino tomar sus valores
     
     result = 1
     
@@ -38,7 +38,7 @@ def multiplicarNumeros (*numeros):  # El argumento se itera como si fuera una Tu
 
 """ Argumentos Variables Key-Value """
 
-def listarTerminos (**terminos):
+def listarTerminos (**terminos):  # El argumento se itera como si fuese un diccionario
     
     for llave, valor in terminos.items():
         print(f"{llave}: {valor}")

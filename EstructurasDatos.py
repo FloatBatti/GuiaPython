@@ -1,4 +1,5 @@
 from copy import deepcopy
+import numpy as np
 
 
 """ --- EJEMPLOS DE LISTAS / ARREGLOS --- """
@@ -8,6 +9,8 @@ print(" Ejemplo de Listas/Arreglos ".center(50, "-"))
 lista = [1, 2, 3, "agus", True, "curso python"]  # la lista puede ser mixta
 
 listaNum: list[int] = [1, 2, 3, 4, 5, 7]  # Lo casteo a entero
+
+print(f"El valor maximo de listaNum es {max(listaNum)} y el minimo {min(listaNum)}")
 
 print("Elemento en el indice 4 de lista", lista[4])  # Se puede obtener un elemento poniendo un indice
 
@@ -63,6 +66,8 @@ print(f"La lista al revez quedaria: {listaNum}")
 listaNum.sort()  # Ordena la lista de forma ascendente
 
 listaNum.sort(reverse=True)  # Ordena la lista de forma descendente
+
+sorted(listaNum)  # Ordena y devuelve de forma ascendente la lista
 
 listaNum.clear()  # Borra todos los elementos de la lista, pero esta sigue en la memoria
 
@@ -120,4 +125,41 @@ dicZip = dict(zip(nombres, edades))  # Devuelve un diccionario con su clave valo
 
 print(dicZip)
 
+""" MATRICES O LISTAS DE LISTAS"""  # La notacion seria [fila][columna]
 
+print(" Matrices o listas de listas ".center(50, "-"))
+
+matriz=[[10,20], [30,40,50], [60,70,80,90]]
+
+print(f"El elemento {matriz[2][1]} se encuentra en la lista de la posicion 2, en el indice 1")
+
+""" Utilizando Numpy """
+
+matriz = np.arange(1,13).reshape(4,3) # Matriz de 4 filas y 3 columnas que va del 1 al 9
+
+print(matriz)
+
+mapa = [
+            [1,1,1,1,1,1],
+            [1,0,0,0,0,1],
+            [1,0,0,0,0,1],
+            [1,0,0,0,0,1],
+            [1,0,0,0,0,1],
+            [1,0,0,0,0,1],
+            [1,1,1,1,1,1],
+    
+        ]
+
+for fila in range(7):
+    
+    for columna in range(6):
+        
+        if (mapa[fila][columna] == 1):
+            print("*", end=" ")
+        else:
+            print(" ", end=" ")
+    
+    print("\n")       
+    
+    
+    

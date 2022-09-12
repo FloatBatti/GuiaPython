@@ -8,6 +8,8 @@ edad = 24
 flotante = 57.14542454714514
 dicc = {"Nombre" : "Juan", "Edad" : "35", "Sueldo" : 20000.0508}
 
+""" VER EN EL MODULO ArchivosWith.py EL USO DEL METODO COUNT"""
+
 print(" Metodo Join ".center(50, "-"))
 nuevoString = " <delimitador> ".join([myStr, nombre])  # El caracter entre comillas indica el delimitador. El metodo recibe un iterable como parametro, por eso creamos una lista poniendo los corchetes
 
@@ -39,6 +41,7 @@ print("Hello, my name is {}, I'm {} years old and this is a float number: {:.3f}
 print("I'm {1} years old, this is a float number: {2:.3f} and my name is {0}".format(nombre,edad,flotante))  # Se utiliza el indice como si fuese un arreglo 
 
 print("This is a float number: {a:.3f}, my name is {b} and I'm {c} years old".format(b=nombre, c=edad, a=flotante))
+
 
 """ Metodo format en Diccionarios """
 

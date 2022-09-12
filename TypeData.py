@@ -1,7 +1,7 @@
 import math
-from copy import copy, deepcopy
 
 PI_CONS = math.pi  # En python no existen las constantes. Por convencion se pone la variable en mayuscula y las palabras divididas por un '_'. Las constantes se declaran en un modulo distinto
+
 pi = round(PI_CONS, 4)  # Lo redondeo a 4 decimales
 print(pi)
 
@@ -22,6 +22,22 @@ print(20.5 / 3.2)
 print(20.5 // 3.2)
 print(5 ** 3)  # significa potencia, sería 5 al cubo
 
+infinito = float("inf")  # "inf" se utiliza para representar el valor infinito y se debe castear a float
+
+print(f"Infinito positivo: {infinito}")
+print(f"Es infinito: {math.isinf(infinito)}")
+
+infinito = float("-inf")  # "inf" se utiliza para representar el valor infinito y se debe castear a float
+
+print(f"Infinito negativo: {infinito}")
+print(f"Es infinito: {math.isinf(infinito)}")
+
+infinito = math.inf  # Tambien se puede poner de esta
+
+notAnumber = float("NaN")  # "Nan" significa que no es un numero y no es case sensitive. No es un tipo de dato numerico definido
+
+print(f"Esta variable es: {notAnumber}")
+print(f"Es not a number: {math.isnan(notAnumber)}")
 
 
 """" --- STRINGS --- """
@@ -43,7 +59,7 @@ print(name + " y " + nombre)  # Se puede concatenar cadenas de caracteres con +
 
 print(nombre.center(30))  # Devuelve una cadena centrada en un campo de tamaño
 
-print(" Strings en Python ".center(50,'-'))  # Ubica el String en el centro, y a sus lados los caracteres del tipo que indicamos. El String indicado tambien se cuenta dentro de los 50
+print(" Strings en Python ".center(50,'-'))  # Rellena con el caracter indicado como parametro el string para que el total sea de 50 caracteres
 
 print(f"Cantidad de caracteres de 'Agustin': {len(nombre)}")  # Cantidad de caracteres del string
 
@@ -64,12 +80,9 @@ print(myStr.lower())  # Todo en minuscula
 print(myStr.capitalize())  # La primer letra en mayuscula
 print(myStr.replace("hOlA", "bye"))  # Reemplaza el primero por el segundo
 
+print(myStr.find("Es")) # Busca y devuelve la posicion de inicio del elemento buscado. Si no la encuentra devuelve -1. 
 
-# Busca y devuelve la posicion de inicio del elemento buscado. Si no la encuentra devuelve -1
-# Se indica ("<parte buscada>, inicio, fin)-. Si no se aclara el inicio o fin se toma el default
-print(myStr.find("Es"))
-
-print(myStr.find("Es", 0, 10))  # Aqui no encuentra y devuelve -1
+print(myStr.find("Es", 0, 10))  # Se indica (<parte buscada>, inicio, fin)-. Si no se aclara el inicio o fin se toma el default. Aqui no encuentra y devuelve -1
 
 print(myStr.index("mI"))  # Igual que el .find pero no devuleve -1, da error si no lo encuentra
 
