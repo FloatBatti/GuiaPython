@@ -1,3 +1,4 @@
+from audioop import reverse
 from copy import deepcopy
 import numpy as np
 
@@ -74,7 +75,7 @@ listaNum.clear()  # Borra todos los elementos de la lista, pero esta sigue en la
 del listaNum  # Borra la lista de la memoria
 
 
-""" --- EJEMPLO DE TUPLAS --- """  # Es una lista inmutable, no se puede modificar. La forma de buscar elementos o metodos, como saber el tamaño, es igual que con listas
+""" --- EJEMPLO DE TUPLAS --- """  # Es una lista inmutable, no se puede modificar (agregar o eliminar elementos). La forma de buscar elementos o metodos, como saber el tamaño, es igual que con listas
 
 print(" Ejemplo de Tuplas ".center(50, "-"))
 
@@ -107,23 +108,34 @@ print(f"Se agrega Tierra: {planetas}")
 planetas.discard('Tierra')
 
 
-""" Metodo Zip """  # Une dos estructuras que tengan el mismo largo. Devuelve el tipo de estructura que le indiquemos casteandolo. Cada elemento de la estructura van a ser el par de elementos de las otras listas en el orden de sus indices
+""" METODO ZIP """  # Une dos estructuras que tengan el mismo largo. Devuelve el tipo de estructura que le indiquemos casteandolo. Cada elemento de la estructura van a ser el par de elementos (clave-valor) de las otras listas en el orden de sus indices
 
 print(" Ejemplo del metodo Zip ".center(50, "-"))
 
 zip1= [1,2,3]
 zip2= [4,5,6]
 
-zip3 = list(zip(zip1,zip2))
+mezclaZip = list(zip(zip1,zip2))
 
-print(zip3)
+print(mezclaZip)
 
-nombres = ["Agustin", "Juan", "Pablo"]
-edades = [24, 40, 15]
+nombres = ["Juan", "Agustin", "Pablo"]
+edades = [40, 24, 15]
 
-dicZip = dict(zip(nombres, edades))  # Devuelve un diccionario con su clave valor
+dicZip = dict(zip(nombres, edades))  # Devuelve un diccionario con su clave valor, respetando el orden de los parametros
 
 print(dicZip)
+
+print(sorted(zip(edades, nombres)))  # Se ordenan los elementos tomando como referencia la primer estructura pasada como parametro
+
+for num, nombre, edad in zip(zip1,nombres,edades):  # Con zip se pueden iterar estructuras en paralelo
+    print(num, nombre, edad)
+
+mezcla = [(1,'a'), (2,'b'), (3,'c')]
+
+numeros, letras = zip(*mezcla)  # Forma de hacer unzip. Devuelve tres tuplas y cada elemento de estas son asignados a cada variable por orden
+
+print(f"Numeros: {numeros}, Letras: {letras}")
 
 """ MATRICES O LISTAS DE LISTAS"""  # La notacion seria [fila][columna]
 
@@ -132,12 +144,6 @@ print(" Matrices o listas de listas ".center(50, "-"))
 matriz=[[10,20], [30,40,50], [60,70,80,90]]
 
 print(f"El elemento {matriz[2][1]} se encuentra en la lista de la posicion 2, en el indice 1")
-
-""" Utilizando Numpy """
-
-matriz = np.arange(1,13).reshape(4,3) # Matriz de 4 filas y 3 columnas que va del 1 al 9
-
-print(matriz)
 
 mapa = [
             [1,1,1,1,1,1],
@@ -160,6 +166,13 @@ for fila in range(7):
             print(" ", end=" ")
     
     print("\n")       
+
+""" Utilizando Numpy """
+
+matriz = np.arange(1,13).reshape(4,3) # Matriz de 4 filas y 3 columnas que va del 1 al 9
+
+print(matriz)
+
     
     
     

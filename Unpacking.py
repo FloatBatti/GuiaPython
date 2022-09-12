@@ -1,3 +1,5 @@
+# El caracter '*' sirve para empaquetar y desempaquetar elementos
+
 valores = 1,2,3  # Se empaquetan los datos en un tupla
 
 print(type(valores))
@@ -13,7 +15,7 @@ print(valor1, valor2, valor3, valor4, valor5, sep=" - ")
 
 lista= [1,2,3]
 lista2= [4,5,6]
-a,b,c = lista
+a,b,c = lista  # Se desempaqueta
 
 print(*lista, sep=" - ")  # Desempaqueta cada elemento de la lista 
 

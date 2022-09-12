@@ -32,6 +32,12 @@ print(dicc.values())  # Devuelve los valores del diccionario
 
 print(dicc.items())  # Devuelve las parejas clave-valor del diccionario
 
+dicc2 = {"age":24}
+
+dicc.update(dicc2)  # Actualiza los datos del diccionario teniendo en cuenta los elementos del que es pasado como parametro. La clave tiene que ser la misma
+
+print(dicc)
+
 dicc.clear()  # Vacia el diccionario
 
 del dicc  # Elimina la variable de la memoria

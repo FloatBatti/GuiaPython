@@ -31,8 +31,7 @@ class Gato:
     def edad(self):
         return self.__edad
 
-    @edad.setter  # Es solo un decorador que se le asiganan a los Setters. Al poner esto no se necesita poner parentesis en la llamada del metodo
-    
+    @edad.setter  # Es solo un decorador que se le asiganan a los Setters. Al poner esto no se necesita poner parentesis en la llamada del metodo, por ende tampoco se ponen argumentos
     def edad(self, edad):
         self.__edad = edad
         
@@ -68,7 +67,7 @@ class Gato:
         print(f"Este {Gato.especie} hace Miaw")
         
     @classmethod  # Metodo de clase. Puede acceder a metodos o variables de la clase
-    def edadCritica(cls, edad):  # En vez de self lleva un argumento que hace referencia a la propia clase, no a la instancia. Se puede acceder a las variables de clase sin tener que utilizar el nombre de la clase
+    def edadCritica(cls, edad):  # En vez de self, lleva un argumento que hace referencia a la propia clase, no a la instancia. Se puede acceder a las variables de clase sin tener que utilizar el nombre de la clase
         return (edad > cls.edadMaxima)
         
         
