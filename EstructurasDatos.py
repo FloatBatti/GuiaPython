@@ -72,6 +72,7 @@ sorted(listaNum)  # Ordena y devuelve de forma ascendente la lista
 
 listaNum.clear()  # Borra todos los elementos de la lista, pero esta sigue en la memoria
 
+
 del listaNum  # Borra la lista de la memoria
 
 
@@ -172,6 +173,7 @@ for fila in range(7):
 matriz = np.arange(1,13).reshape(4,3) # Matriz de 4 filas y 3 columnas que va del 1 al 9
 
 print(matriz)
+
 
     
     

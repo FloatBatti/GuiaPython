@@ -1,12 +1,16 @@
 # Por convencion, en Python las clases comienzan con mayuscula
-# Cada clase tiene un diccionario con su atributo (value) y su valor (key)
 # Un objeto es una instancia de una clase
+
+# Una clase es un plano que va a funcionar como molde para crear objetos. Aqui se definen atributos y metodos
+# Un objeto es una cosa o entidad que va a tener caracteristicas (atributos) y funcionalidades (metodos)
+# Un objeto es la instancia de una clase. 
+
 
 # Ejemplo 1
 
 class Gato:
     
-    especie = "Mamifero"  # Atributo de clase. Todos los objetos van a tener el atributo mamifero, es inmutable, estatico constante. Ademas no hace falta crear un objeto para acceder a este atributo
+    especie = "Mamifero"  # Atributo de clase. Todos los objetos van a tener el atributo mamifero, es inmutable, estatico y constante. Ademas no hace falta crear un objeto para acceder a este atributo
     edadMaxima = 20
     
 
@@ -24,6 +28,8 @@ class Gato:
         
         return f"Nombre: {self.__nombre} , Edad: {self.__edad} , Alimentos: {self.alimentos}, Patas: {self.__numeroPatas}"
 
+    # Los metodos Getters me devuelven el valor del atributo de un objeto
+    # Los metodos Setters me permiten darle o cambiar los valores de los atributos de un objeto
 
     # Para que funcione primero se pone el property y luedo el setter
         
