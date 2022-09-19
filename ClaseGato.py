@@ -16,8 +16,8 @@ class Gato:
 
     def __init__(self, nombre, edad, *alimentos):  # Constructor. Self siempre es una referencia al objeto mismo, siendo siempre el el primer parámetro formal. El constructor define la forma en que se crean los objetos 
     
-    # El doble guion bajo indica que no es modificable fuera de la clase
-    # Si utilizamos un solo guion bajo indicamos que no se tendria que modificar, pero no quita que sea posible
+    # El doble guion bajo indica que no es modificable fuera de la clase. No se pueden heredar atributos en este estado
+    # Si utilizamos un solo guion bajo indicamos que no se tendria que modificar, pero no quita que sea posible. Significa que es un atributo PRIVADO
       
         self.__nombre = nombre
         self.__edad = edad

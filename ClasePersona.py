@@ -5,6 +5,8 @@ class Persona():
         self._nombre = nombre  # No le pongo doble guion bajo porque si se hereda, el hijo no puede acceder al atributo
         self._edad = edad
         
+    
+        
         
     def __str__(self):
         
