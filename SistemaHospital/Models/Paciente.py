@@ -1,23 +1,20 @@
-from Persona import Persona
-from Turno import Turno
+from SistemaHospital.Models.Persona import Persona
+from SistemaHospital.Models.Turno import Turno
 
+""""""
 class Paciente(Persona):
     
-    def __init__(self, nombre:str, dni:str, telefono:str, mail:str, obraSocial:str):
+    def __init__(self, nombre:str, dni:str, mail:str, telefono:str,  obraSocial:str, turno:Turno):
         
-        super().__init__(nombre, dni, telefono, mail)    
+        super().__init__(nombre, dni, mail, telefono)    
         self._obraSocial = obraSocial
-        self._listaTurnos = []
-        self._listaDoctores = []
+        self._turno = turno
+        
+        
+    def getObraSocial(self):
+        return self._obraSocial
+    
+    def gerTurno(self):
+        return self._turno
         
      
-    def agregarTurno(self, nuevoTurno:Turno):
-         
-         self._listaTurnos.append(nuevoTurno)
-         
-    def mostrarTurnos (self):
-        
-        for turno in self._listaTurnos:
-            
-            print(turno)
-        

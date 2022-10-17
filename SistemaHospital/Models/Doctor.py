@@ -1,19 +1,17 @@
-from Paciente import Paciente
-from Persona import Persona
+
+from SistemaHospital.Models.Persona import Persona
 
 
 class Doctor(Persona):
     
-    def __init__(self,nombre:str, dni:str, telefono:str, mail:str, especializacion:str):
+    def __init__(self,nombre:str, dni:str, mail:str, telefono:str, especializacion:str):
         
-        super().__init__(nombre, dni, telefono, mail)
+        super().__init__(nombre, dni, mail, telefono)
         self._especializacion = especializacion
-        self._listaConsultorios = []
-        self._listaPacientes = []
         
-    def agregarPaciente(self, nuevoPaciente:Paciente):
         
-        self._listaPacientes.append(nuevoPaciente)
+    def getEspecializacion(self):
         
+        return self._especializacion
 
 

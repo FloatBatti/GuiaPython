@@ -6,3 +6,8 @@ class Consultorio:
         self._numero = numero
         self._estado = estado
         
+    def getNumero(self):
+        return self._numero
+    
+    def getEstado(self):
+        return self._estado
