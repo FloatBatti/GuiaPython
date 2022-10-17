@@ -1,5 +1,5 @@
 #  Esta clase funciona al implementar With
-class ManejoArvhivos:
+class ManejoArchivos:
     
     def __init__(self, nombreArchivo) -> None:
         

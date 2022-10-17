@@ -1,4 +1,5 @@
 import math
+from datetime import datetime
 
 PI_CONS = math.pi  # En python no existen las constantes. Por convencion se pone la variable en mayuscula y las palabras divididas por un '_'. Las constantes se declaran en un modulo distinto
 
@@ -95,6 +96,18 @@ islower: Devuelve True o False si es una cadena contiene solo minusculas
 isupper: Devuelve True o False si es una cadena contiene solo mayusculas
 
 """
+
+fechaActual = datetime.now()
+print(f"La fecha actual es: {fechaActual}")
+
+fecha = datetime(1997,12,18,10,35,21)
+print(f"Una fecha cualquiera: {fecha}")
+
+fechaFormat = datetime.strftime(fechaActual, "%d/%m/%y") 
+print(f"La fecha formateada: {fechaFormat}")
+
+#En el siguiente sitio web se encuentran las distinta maneras de darle formato a una variable date: https://strftime.org
+
 
 if temp < 25:
     print("Hace frio")

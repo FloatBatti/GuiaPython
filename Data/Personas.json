@@ -1,0 +1,12 @@
+[
+    {
+        "_nombre" : "Cosme Fulanito", 
+        "_dni" : "12345678", 
+        "_telefono" : [
+            "2237654321", 
+            "11578497", 
+            "261587954"
+        ], 
+        "_mail" : "mailfake@gmail.com"
+    }
+]

@@ -134,7 +134,7 @@ for num, nombre, edad in zip(zip1,nombres,edades):  # Con zip se pueden iterar e
 
 mezcla = [(1,'a'), (2,'b'), (3,'c')]
 
-numeros, letras = zip(*mezcla)  # Forma de hacer unzip. Devuelve tres tuplas y cada elemento de estas son asignados a cada variable por orden
+numeros, letras = zip(*mezcla)  # Forma de hacer unzip. Devuelve dos tuplas y cada elemento de estas son asignados a cada variable por orden
 
 print(f"Numeros: {numeros}, Letras: {letras}")
 

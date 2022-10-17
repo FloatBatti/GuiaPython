@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from logging import Manager
 from traceback import print_tb
 
-from ClaseArchivos import ManejoArvhivos
+from ClaseManejoArchivos import ManejoArchivos
 
 
 """ MANEJO DE CONTEXTO WITH """
@@ -23,18 +23,19 @@ with open ("Archivo.txt", "r", encoding="utf8") as archivo:  # With abre y cierr
 
 print("Se abre y lee archivo utilizando Context Manager".center(70, "-"))
 
-with ManejoArvhivos("Archivo.txt") as archivo:
+with ManejoArchivos("Archivo.txt") as archivo:
     
     print(archivo.read())
+    
     
 
 """ RECIBIR INFORMACION LA WEB Y DARLE FORMATO UTF """
 
 print("Se recibe la informacion de un sitio web y se le da formato utf-8".center(70, "-"))
 
-with urlopen ("https://docs.python.org/3/") as mensaje:
+with urlopen ("https://docs.python.org/3/") as mensaje: 
     
-    contenido = str(mensaje.read().decode('utf-8') ) # Al codificarlo en utf-8 se le da un formato sin errores ni caracteres extraño
+    contenido = str(mensaje.read().decode('utf-8')) # Al codificarlo en utf-8 se le da un formato sin errores ni caracteres extraños
     
     print(contenido)
     
