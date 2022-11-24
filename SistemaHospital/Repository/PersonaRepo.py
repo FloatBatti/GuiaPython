@@ -22,7 +22,7 @@ class PersonaRepo:
         
         with open (self.fileName, "r", encoding="utf8") as archivo:
             
-            print(archivo.read())
+            pass
             
     
     def Add(self, persona:Persona):

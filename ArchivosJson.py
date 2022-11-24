@@ -41,6 +41,7 @@ with open (fileName, "r", encoding="utf8") as archivo:  # Lo abro en modo lectur
     
     try:
         data = json.load(archivo) #Mejor opcion para manipular. Devuelvo todo el json como una lista
+        print(data)
         
     except:
         print("Archivo vacio")
@@ -48,11 +49,12 @@ with open (fileName, "r", encoding="utf8") as archivo:  # Lo abro en modo lectur
     
 
 #SERIALIZACIÓN  
+
 with open (fileName, "w", encoding="utf8") as archivo:  # Lo abro en modo escritura
 
     objectDict = serializarPaciente(paciente1)  # Le doy formato de diccionario al objeto
       
-    data.append(objectDict)  # Agrego el objeto a la lista
+    data.append(objectDict)# Agrego el objeto a la lista
     
     json.dump(data, archivo, indent= 4, separators=(", ", " : "))  # Cargo la lista nueva al Json, es decir, actualice mi archivo
 

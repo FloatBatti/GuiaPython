@@ -1,6 +1,7 @@
 import math
 from datetime import datetime
 
+
 PI_CONS = math.pi  # En python no existen las constantes. Por convencion se pone la variable en mayuscula y las palabras divididas por un '_'. Las constantes se declaran en un modulo distinto
 
 pi = round(PI_CONS, 4)  # Lo redondeo a 4 decimales
@@ -12,7 +13,7 @@ vacio = None # Indica que la variable no guarda ningun valor
 
 name = input("Ingrese nombre: ")  # Se pide ingresar un nombre
 
-edad = int(input("Ingrese edad: "))  # Se pide ingresar una edad y se castea para que tome un int y no un string
+edad = int(input("Ingrese edad: "))  # type: ignore # Se pide ingresar una edad y se castea para que tome un int y no un string
 
 temp = int(input("Temperatura: "))
 
@@ -113,6 +114,10 @@ if temp < 25:
     print("Hace frio")
 else:
     print("Hace calor")
+
+def main():
+    print("main")
+    
 
 
     
